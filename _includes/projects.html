@@ -1,0 +1,23 @@
+{% if site.data.data.projects %}
+{% assign projects = site.data.data.projects %}
+<section class="row mid-section">
+    <div class="heading">{{ projects.title }}</div>
+    {% if projects.intro %}
+    <div class="intro">
+        <p>{{ projects.intro }}</p>
+    </div><!--//intro-->
+    {% endif %}
+    {% for project in projects.list %}
+    <div class="col-auto projects">
+        {% if project.link %}
+        <a href="{{ project.link }}" target="_blank">{{ project.title }}</a>
+        {% else %}
+        {{ project.title }}
+        {% endif %}
+        {% if project.tagline %}
+        - <span class="project-tagline">{{ project.tagline }}</span>
+        {% endif %}
+    </div>
+    {% endfor %}
+</section>
+{% endif %}

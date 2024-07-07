@@ -222,6 +222,10 @@ body {
     border-left: 2px solid #b4b4b4;
 }
 
+.mid-section .intro {
+    padding-bottom: 10px;
+}
+
 .mid-section:last-child {
     padding-bottom: 30px;
 }
@@ -420,4 +424,14 @@ hr {
     .fa-heart {
         color: #690000;
     }
+}
+
+
+a {
+    color: #555555;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #123f58;
 }

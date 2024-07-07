@@ -122,7 +122,7 @@ projects:
     You can list your side projects in this
     section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
-  assignments:
+  list:
     - title: Velocity
       link: "#hook"
       tagline: "A responsive website template designed to help startups promote, market and sell their products."
