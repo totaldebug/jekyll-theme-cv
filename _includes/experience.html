@@ -1,0 +1,57 @@
+{% if site.data.data.experiences %}
+{% assign experiences = site.data.data.experiences %}
+<section class="row mid-section">
+    <div class="heading">{{ experiences.title }}</div>
+    {% for experience in experiences.list %}
+    <div class="row work">
+        <div class="row">
+
+        </div>
+        <div class="row head">
+
+            <div class="col-auto job-title">{{ experience.title }}</div>
+            {% if experience.company %}
+            <div class="col-auto sprtr">│</div>
+            <div class="col-auto company">{{ experience.company }}</div>
+            {% endif %}
+            <div class="col text-end time">{{ experience.from }} - {{ experience.to }}</div>
+        </div>
+        {% if experience.summary %}
+        <div class="row sub-section">
+            {{ experience.summary | markdownify }}
+        </div>
+        {% endif %}
+        {% if experience.responsibilities %}
+        <div class="row sub-section">
+            <div class="sub-heading pt-3">{{ experience.responsibilities.title }}</div>
+            <ul>
+                {% for item in experience.responsibilities.list %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        {% if experience.achievements %}
+        <div class="row sub-section">
+            <div class="sub-heading pt-3">{{ experience.achievements.title }}</div>
+            <ul>
+                {% for item in experience.achievements.list %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        {% if experience.technologies %}
+        <div class="row sub-section">
+            <div class="sub-heading pt-3">{{ experience.technologies.title }}</div>
+            <div class="technologies">
+                {% for skill in experience.technologies.list %}
+                <span class="skill-badge">{{ skill }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    {% endfor %}
+</section>
+{% endif %}

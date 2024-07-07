@@ -1,0 +1,9 @@
+{% if site.data.data.professional-summary %}
+{% assign summary = site.data.data.professional-summary %}
+<div class="row summary">
+    <div class="heading">{{ summary.title }}</div>
+    <div class="summary pe-3">
+        {{ summary.detail | markdownify }}
+    </div>
+</div>
+{% endif %}

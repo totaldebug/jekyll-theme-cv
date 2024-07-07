@@ -1,0 +1,16 @@
+<!-- _includes/obfuscated_email.html -->
+{% assign email = site.data.data.contact.email %}
+{% assign user = email | split: '@' | first %}
+{% assign domain = email | split: '@' | last %}
+{% assign mailto = 'mailto:' | append: email %}
+{% assign mailto_encoded = mailto | replace: '@', '&#64;' | replace: '.', '&#46;' %}
+{% assign email_encoded = email | replace: '@', '&#64;' | replace: '.', '&#46;' %}
+
+<div class="icon-row">
+    <i class="fa-solid fa-at me-2"></i>
+    <a href="{{ mailto_encoded }}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="20">
+            <text x="0" y="15" font-family="Arial" font-size="15">{{ email_encoded }}</text>
+        </svg>
+    </a>
+</div>

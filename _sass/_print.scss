@@ -1,0 +1,23 @@
+@media print {
+    @page {
+        size: A4;
+    }
+
+    footer {
+        display: none;
+    }
+
+
+    .col-md-8,
+    .col-md-4 {
+        flex: none;
+    }
+
+    .col-md-8 {
+        width: 66.66667%;
+    }
+
+    .col-md-4 {
+        width: 33.33333%;
+    }
+}

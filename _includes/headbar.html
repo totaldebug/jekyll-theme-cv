@@ -1,0 +1,28 @@
+{% assign header = site.data.data.header %}
+<div class="row top-section">
+    <div class="left-box">
+        {% if site.data.data.header.avatar %}
+        <div class="section notdraggable pict-sec firstsection">
+            <div class="paragraph firstparagraph">
+                <div class="pict-pic">
+                    <div class="field">{% if header.avatar %}
+                        <img class="avatar" src="{{ site.baseurl }}/assets/images/{{ header.avatar }}"
+                            alt="profile picture" />
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        {% endif %}
+        <div class="section notdraggable name-sec">
+            <div class="paragraph firstparagraph">
+                <div class="name">
+                    <span>{{ header.name }}</span>
+                </div>
+                <div class="resume-title txt-bold"><span>{{ header.tagline }}</span></div>
+            </div>
+
+        </div>
+    </div>
+</div>
