@@ -4,7 +4,12 @@
     <div class="heading">{{ skills.title }}</div>
     <div class="skills">
         {% for skill in skills.skills %}
-        <span class="skill-badge">{{ skill }}</span>
+        <div>
+            <strong>{{ skill.title }}:</strong>
+            {% for item in skill.list %}
+            <span class="skill-badge">{{ item }}</span>
+            {% endfor %}
+        </div>
         {% endfor %}
     </div>
 </section>

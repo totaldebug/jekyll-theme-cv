@@ -18,11 +18,36 @@ contact:
 skills:
   title: Key Skills
   skills:
-    - Skill 1
-    - Skill 2
-    - Skill 3
-    - Skill 4
-    - Skill 5
+    - title: Technical Skills
+      list:
+        - Git
+        - Python
+        - VMware
+        - Ansible
+        - Terraform
+        - Windows Server
+        - Linux
+        - Jira
+        - Agile
+        - AWS SSM
+    - title: Management Skills
+      list:
+        - Team Leader
+        - SLA Management
+        - Guiding Hand
+    - title: Analytical Skills
+      list:
+        - Data Analysis
+        - Reporting
+        - Process Improvement
+        - Workflow Optimisation
+    - title: Soft Skills
+      list:
+        - Effective Communication
+        - Problem-solving
+        - Collaboration
+        - Adaptability
+        - Time Management
 
 professional-summary:
   title: Professional Summary
