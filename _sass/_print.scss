@@ -20,4 +20,21 @@
     .col-md-4 {
         width: 33.33333%;
     }
+
+    .top-section {
+        padding-left: unset !important;
+    }
+
+    .mid-section,
+    .bottom-section,
+    .last-section {
+        padding-left: unset !important;
+        padding-right: unset !important;
+        padding-top: unset !important;
+    }
+
+    .name,
+    .txt-bold {
+        letter-spacing: unset !important;
+    }
 }
