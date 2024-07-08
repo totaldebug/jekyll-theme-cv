@@ -46,7 +46,7 @@
             <div class="sub-heading pt-3">{{ experience.technologies.title }}</div>
             <div class="technologies">
                 {% for skill in experience.technologies.list %}
-                <span class="skill-badge">{{ skill }}</span>
+                {{ skill }}{% if forloop.last == false %},{% endif %}
                 {% endfor %}
             </div>
         </div>
