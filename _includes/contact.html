@@ -4,7 +4,7 @@
     <div class="heading">Contact</div>
     {% if contact.phone %}
     <div class="icon-row">
-        <i class="fa-solid fa-phone me-2"></i> {{ contact.phone }}
+        <i class="fa-solid fa-phone me-2"></i> {{ contact.phone | phoneObfuscate }}
     </div>
     {% endif %}
     {% if contact.email %}
@@ -53,8 +53,8 @@
     {% if contact.codewars %}
     <div class="icon-row">
         <i class="fas fa-code me-2"></i>
-        <a href="https://www.codewars.com/users/{{ contact.codewars }}"
-            target="_blank">codewars.com/users/{{ contact.codewars }}</a>
+        <a href="https://www.codewars.com/users/{{ contact.codewars }}" target="_blank">codewars.com/users/{{
+            contact.codewars }}</a>
     </div>
     {% endif %}
 </div>
