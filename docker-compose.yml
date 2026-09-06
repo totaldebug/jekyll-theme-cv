@@ -1,11 +1,20 @@
-version: '3'
-
+# Runs the theme's local preview using the same Gemfile-pinned stack as a
+# native build. The legacy `jekyll/jekyll` images are unmaintained and lack
+# arm64 support, so we run Jekyll on the official Ruby image via Bundler.
 services:
   jekyll:
     container_name: online-cv
-    image: jekyll/jekyll:4.0
-    command: jekyll serve --watch --force_polling --verbose --livereload --host 0.0.0.0
+    image: ruby:3.3
+    working_dir: /srv/jekyll
+    command: >
+      bash -c "bundle install &&
+               bundle exec jekyll serve --watch --force_polling --livereload --host 0.0.0.0"
     volumes:
       - .:/srv/jekyll
+      - bundle:/usr/local/bundle
     ports:
       - 4000:4000
+      - 35729:35729 # livereload
+
+volumes:
+  bundle:
